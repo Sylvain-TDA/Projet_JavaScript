@@ -11,7 +11,7 @@ Dans le cadre du cours JavaScript, nous faisons un site projet sur 6 jours (1 jo
 
 ### Définition de la gestion des tickets
 
-[Sans titre](https://www.notion.so/1e318fb8a282802ab340da25ec17d08e?pvs=21)
+[Lien vers Notion](https://www.notion.so/1e318fb8a282802ab340da25ec17d08e?pvs=21)
 
 ### Structure des dossiers et fichiers
 
