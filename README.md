@@ -7,3 +7,6 @@ Il sera composé d'une page accueil, une page galerie et une page jeux.\
 La page accueil aura un feed sur lequel on pourra partager du contenu.\
 La page galerie aura un affichage modifiable, une option pour l'ajout d'image ainsi qu'une publicité.
 
+## Langages 
+
+J'utiliserai Html, Css et JavaScript pour ce projet.
