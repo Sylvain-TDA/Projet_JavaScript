@@ -31,16 +31,16 @@ function getAJoke() {
 function addToMyPage(joke) {
 
     const blague = document.getElementById("blague");
-    const newDiv = document.createElement("article");
+    const newArticle = document.createElement("article");
 
     // On créé un nouveau texte
     const newContent = document.createTextNode(joke.setup + ' ' + joke.delivery);
 
-    newDiv.appendChild(newContent);
+    newArticle.appendChild(newContent);
     
     const firstJoke = blague.firstChild;
 
-    blague.insertBefore(newDiv, firstJoke);    
+    blague.insertBefore(newArticle, firstJoke);    
 }
 
 
