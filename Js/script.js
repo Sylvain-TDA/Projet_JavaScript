@@ -1,5 +1,4 @@
-//let printjoke = "";
-
+const blague = document.getElementById("blague");
 
 // fetch va chercher dans l'URL en paramètre de la fonction.
 //  Ensuite, il renvoit un résultat qu'on lit en JSON. 
@@ -9,40 +8,35 @@ function getAJoke() {
     fetch("https://v2.jokeapi.dev/joke/Any?lang=fr")
         .then(res => res.json())
         .then(joke => {
-
-            // Cette fonction prend en paramètre le JSON de fetch.
-            // On déclare printjoke à vide puis si le fetch renvoit une blague en une seule ligne (twopart) 
-            // -> printjoke devient la partie "joke" du JSON.
-            // Sinon, il imprime la première partie de la blague (setup) puis la seconde (delivery)
-
-            // if (joke.type == "twopart") {
-
-            //     printjoke = joke.setup + joke.delivery;
-            //     console.log(printjoke)
-            // } else {
-            //     printjoke = joke.joke;
-            //     console.log("twopart")
-            // }
             addToMyPage(joke);
         }
         );
 }
 
 function addToMyPage(joke) {
-
-    const blague = document.getElementById("blague");
+    // on récupére l'élément avec l'ID="blague" et on créé dans newArticle une balise article
+    
     const newArticle = document.createElement("article");
 
-    // On créé un nouveau texte
+    // On créé un nouveau contenu qui contiendra la blague
     const newContent = document.createTextNode(joke.setup + ' ' + joke.delivery);
 
+    // à la variable newArticle, on ajoute notre blague newContent
     newArticle.appendChild(newContent);
-    
+
+    // on déclare firstJoke qui va ajouter au premier enfant de blague
     const firstJoke = blague.firstChild;
 
-    blague.insertBefore(newArticle, firstJoke);    
+    //on insère notre nouvelle balise article et la blague
+    blague.insertBefore(newArticle, firstJoke);
 }
 
+function btnReload () {
+    blague.innerHTML="";
+    for (i = 0; i < 10; i++) {
+        getAJoke();
+    }    
+}
 
 // loop 10 times
 
