@@ -51,8 +51,8 @@ function dropDown () {
 
 // Ferme le menu dropdown quand l'utilisateur clic ailleur
 window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
+    if (!event.target.matches('.dropdownBtn')) {
+      var dropdowns = document.getElementsByClassName("dropdownContent");
       var i;
       for (i = 0; i < dropdowns.length; i++) {
         var openDropdown = dropdowns[i];
