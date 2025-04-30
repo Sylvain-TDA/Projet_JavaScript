@@ -4,9 +4,9 @@ article {
     font-size: larger;
     margin: 1em;
     padding: 1px;
-    width:30%;
+    width: 30%;
     border-style: 1px;
-    
+
 }
 
 button {
@@ -29,6 +29,10 @@ h1 {
 
 #blague {
     flex-wrap: wrap;
+}
+
+#btnHeader {
+
 }
 
 @media (min-width: 800px) {
