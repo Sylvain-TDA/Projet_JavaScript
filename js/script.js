@@ -50,6 +50,7 @@ function dropDown () {
 }
 
 // Ferme le menu dropdown quand l'utilisateur clic ailleur
+
 window.onclick = function(event) {
     if (!event.target.matches('.dropdownBtn')) {
       var dropdowns = document.getElementsByClassName("dropdownContent");

@@ -1,19 +1,29 @@
+@font-face {
+    font-family: "Finlandica";
+    src: url(/fonts/Finlandica/Finlandica-VariableFont_wght.ttf) format(truetype);
+}
+
 /* ----BASE---- */
+
+* {
+    font-family: "Finlandica";
+}
 
 article {
     font-size: larger;
+    padding: 1em;
     margin: 1em;
-    padding: 1px;
-    width: 30%;
-    border-style: 1px;
+    width: 18%;
+    border-style: solid;
+    box-shadow: 12px 12px 1px 1px #5a9fc650;
 
 }
 
 button {
-    font-size: 1.5em;
     background-color: #5a9fc650;
     border-radius: 9%;
-}
+    font-size: 1.2em;
+  }
 
 header {
     background-color: #5a9fc650;
@@ -30,8 +40,6 @@ h1 {
     flex-wrap: wrap;
 }
 
-#btnHeader {}
-
 @media (min-width: 800px) {
     #blague {
         display: flex;
@@ -45,9 +53,14 @@ h1 {
 
 /* ----STATE---- */
 
+.btnActualiser {
+    margin: 0.8em;
+    padding: 0.8em;
+}
+
 .dropdown {
     float:right;
-    padding: 12px 16px;
+    padding: 16px 16px;
     position: relative;
 }
 
