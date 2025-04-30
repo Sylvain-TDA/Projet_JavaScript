@@ -23,14 +23,28 @@ button {
     background-color: #5a9fc650;
     border-radius: 9%;
     font-size: 1.2em;
-  }
+}
 
 header {
-    background-color: #5a9fc650;
+    background: linear-gradient(100deg, rgba(255, 255, 255, 1) 0%,
+            rgba(87, 173, 199, 1) 22%,
+            rgb(62, 107, 150) 35%,
+            rgb(121, 160, 204) 100%);
+}
+
+footer {
+    background: linear-gradient(100deg,
+            rgb(121, 160, 204) 0%,
+            rgba(87, 173, 199, 1) 22%,
+            rgb(62, 107, 150) 35%,
+            rgba(255, 255, 255, 1) 100%);
 }
 
 h1 {
     margin: 2em;
+    font-style: oblique;
+    box-shadow: 0px 6px 1px 0px #5a9fc650;
+    width: 25%;
 }
 
 
@@ -54,12 +68,17 @@ h1 {
 /* ----STATE---- */
 
 .btnActualiser {
+    float: right;
     margin: 0.8em;
     padding: 0.8em;
 }
 
+.center {
+    text-align: center;
+}
+
 .dropdown {
-    float:right;
+    float: right;
     padding: 16px 16px;
     position: relative;
 }
@@ -67,16 +86,17 @@ h1 {
 .dropdownBtn {
     cursor: pointer;
     font-size: 2.2em;
+    padding: 0.4em;
 }
 
-.dropdownBtn:hover, .dropdownBtn:focus {
+.dropdownBtn:hover,
+.dropdownBtn:focus {
     background-color: #0876b650;
 }
 
 
 .dropdownContent {
-    background-color:#0876b650;
-    color:black;
+    color: black;
     display: none;
     position: relative;
     text-align: right;
@@ -89,6 +109,13 @@ h1 {
     text-decoration: none;
 }
 
-.show {display:block;}
+.imgFooter {
+    display: flex;
+    justify-content:end;
+}
+
+.show {
+    display: block;
+}
 
 /* ----THEME---- */
