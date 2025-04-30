@@ -1,0 +1,47 @@
+/* ----BASE---- */
+
+article {
+    font-size: larger;
+    margin: 1em;
+    padding: 1px;
+    width:30%;
+    border-style: 1px;
+    
+}
+
+button {
+    margin: 2em;
+    font-size: 1.5em;
+    background-color: #5a9fc650;
+    border-radius: 9%;
+}
+
+header {
+    background-color: #5a9fc650;
+}
+
+h1 {
+    margin: 2em;
+}
+
+
+/* ----LAYOUT---- */
+
+#blague {
+    flex-wrap: wrap;
+}
+
+@media (min-width: 800px) {
+    #blague {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+    }
+}
+
+
+/* ----MODULE---- */
+
+/* ----STATE---- */
+
+/* ----THEME---- */
