@@ -15,7 +15,7 @@ function getAJoke() {
 
 function addToMyPage(joke) {
     // on récupére l'élément avec l'ID="blague" et on créé dans newArticle une balise article
-    
+
     const newArticle = document.createElement("article");
 
     // On créé un nouveau contenu qui contiendra la blague
@@ -31,11 +31,11 @@ function addToMyPage(joke) {
     blague.insertBefore(newArticle, firstJoke);
 }
 
-function btnReload () {
-    blague.innerHTML="";
+function btnReload() {
+    blague.innerHTML = "";
     for (i = 0; i < 10; i++) {
         getAJoke();
-    }    
+    }
 }
 
 // loop 10 times
@@ -45,27 +45,34 @@ for (i = 0; i < 10; i++) {
 }
 
 
-function dropDown () {
+function dropDown() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
 
 // Ferme le menu dropdown quand l'utilisateur clic ailleur
 
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (!event.target.matches('.dropdownBtn')) {
-      var dropdowns = document.getElementsByClassName("dropdownContent");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
+        var dropdowns = document.getElementsByClassName("dropdownContent");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
         }
-      }
     }
-  } 
+}
 
+const blagueEnvoi = document.getElementById("blagueEnvoi");
+const jokeForm = document.getElementById("form");
+jokeForm.addEventListener("submit", getJokeForm);
 
-
+function getJokeForm(event) {
+    event.preventDefault();
+    addToMyPage({"setup": blagueEnvoi.value, "delivery": ""});
+    console.log(blagueEnvoi);
+}
 
 
 
