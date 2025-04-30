@@ -13,6 +13,8 @@ function getAJoke() {
         );
 }
 
+// cette fonction va charger dans la page la blague récupérée avec le fetch.
+
 function addToMyPage(joke) {
     // on récupére l'élément avec l'ID="blague" et on créé dans newArticle une balise article
 
@@ -31,11 +33,18 @@ function addToMyPage(joke) {
     blague.insertBefore(newArticle, firstJoke);
 }
 
+// cette fonction va gérer le rafraîchissement de la page au click sur le bouton actualiser
+
 function btnReload() {
+    // on remplace par du texte vide dans la balise où va être effectuée la fonction
     blague.innerHTML = "";
+
+    // puis on recharge les blagues pour les actualiser
     for (i = 0; i < 10; i++) {
         getAJoke();
     }
+
+    // enfin on ajoute les blagues déjà renseignées par l'utilisateur
     addToMyPage({"setup": blagueSetup.value, "delivery": blagueDelivery.value});
 }
 
@@ -45,6 +54,7 @@ for (i = 0; i < 10; i++) {
     getAJoke();
 }
 
+// la fonction va afficher le dropdown
 
 function dropDown() {
     document.getElementById("myDropdown").classList.toggle("show");
@@ -65,13 +75,17 @@ window.onclick = function (event) {
     }
 }
 
+// gestion des input text comme blague
+
 const blagueSetup = document.getElementById("blagueSetup");
 const blagueDelivery = document.getElementById("blagueDelivery");
 const jokeForm = document.getElementById("form");
+
+//à la submission (submit), on lance la fonction getJokeForm
 jokeForm.addEventListener("submit", getJokeForm);
 
 function getJokeForm(event) {
+    // pour éviter le rafraichissement de la page
     event.preventDefault();
     addToMyPage({"setup": blagueSetup.value, "delivery": blagueDelivery.value});
-    console.log(blagueSetup);
 }
