@@ -12,7 +12,14 @@
 <body>
     <header>
         <img src="/images/logo_200.png" alt="Logo du site">
-        <button id="btnHeader">Menu</button>
+        <div class="dropdown">
+            <button onclick="dropDown()" class="dropdownBtn">Menu</button>
+            <div id="myDropdown" class="dropdownContent">
+                <a href="#">Accueil</a>
+                <a href="#">Galerie</a>
+                <a href="#">Jeux</a>
+            </div>
+        </div>
     </header>
     <div>
         <h1>Bienvue sur Blagues creation</h1>
