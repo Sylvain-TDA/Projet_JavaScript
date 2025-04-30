@@ -36,6 +36,7 @@ function btnReload() {
     for (i = 0; i < 10; i++) {
         getAJoke();
     }
+    addToMyPage({"setup": blagueSetup.value, "delivery": blagueDelivery.value});
 }
 
 // loop 10 times
@@ -64,15 +65,13 @@ window.onclick = function (event) {
     }
 }
 
-const blagueEnvoi = document.getElementById("blagueEnvoi");
+const blagueSetup = document.getElementById("blagueSetup");
+const blagueDelivery = document.getElementById("blagueDelivery");
 const jokeForm = document.getElementById("form");
 jokeForm.addEventListener("submit", getJokeForm);
 
 function getJokeForm(event) {
     event.preventDefault();
-    addToMyPage({"setup": blagueEnvoi.value, "delivery": ""});
-    console.log(blagueEnvoi);
+    addToMyPage({"setup": blagueSetup.value, "delivery": blagueDelivery.value});
+    console.log(blagueSetup);
 }
-
-
-

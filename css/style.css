@@ -33,6 +33,7 @@ header {
             rgba(87, 173, 199, 1) 22%,
             rgb(62, 107, 150) 35%,
             rgb(121, 160, 204) 100%);
+    margin-bottom: 5em;
 }
 
 footer {
@@ -41,13 +42,16 @@ footer {
             rgba(87, 173, 199, 1) 22%,
             rgb(62, 107, 150) 35%,
             rgba(255, 255, 255, 1) 100%);
+    margin-top: 5em;
 }
 
 h1 {
     margin: 2em;
     font-style: oblique;
     box-shadow: 0px 6px 1px 0px #5a9fc650;
+    @media (min-width:800px){
     width: 25%;
+    }
 }
 
 
@@ -63,6 +67,11 @@ h1 {
         flex-direction: row;
         text-align: left;
     }
+}
+
+#form {
+    display:flex;
+    flex-direction: column;
 }
 
 /* ----MODULE---- */
@@ -129,6 +138,12 @@ h1 {
 
 .show {
     display: block;
+}
+
+.textarea {
+    font-size: large;
+    margin: 0.4em;
+    padding: 0.2em;
 }
 
 /* ----THEME---- */
