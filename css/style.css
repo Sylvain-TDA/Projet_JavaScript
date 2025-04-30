@@ -13,10 +13,13 @@ article {
     font-size: larger;
     padding: 1em;
     margin: 1em;
-    width: 18%;
     border-style: solid;
     box-shadow: 12px 12px 1px 1px #5a9fc650;
+    width: 60%;
 
+    @media (min-width: 800px) {
+        width: 18%;
+    }
 }
 
 button {
@@ -62,15 +65,17 @@ h1 {
     }
 }
 
-
 /* ----MODULE---- */
 
 /* ----STATE---- */
 
 .btnActualiser {
-    float: right;
+    /* float: right; */
     margin: 0.8em;
     padding: 0.8em;
+    /* @media (min-width:800px) {
+        float: center;
+    }    */
 }
 
 .center {
@@ -111,7 +116,15 @@ h1 {
 
 .imgFooter {
     display: flex;
-    justify-content:end;
+    justify-content: end;
+}
+
+.modifPosition {
+    float: inline-start;
+
+    @media (min-width:800px) {
+        float: right;
+    }
 }
 
 .show {
