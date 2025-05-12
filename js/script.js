@@ -52,7 +52,7 @@ function btnReload() {
     }
 
     // enfin on ajoute les blagues déjà renseignées par l'utilisateur
-    if (blagueSetup.value && blagueDelivery) {
+    if (blagueSetup.value && blagueDelivery.value) {
         addToMyPage({ "setup": blagueSetup.value, "delivery": blagueDelivery.value });
     }
 }
@@ -97,12 +97,13 @@ function getJokeForm(event) {
     // pour éviter le rafraichissement de la page
     event.preventDefault();
     addToMyPage({ "setup": blagueSetup.value, "delivery": blagueDelivery.value }, true);
-    submitDone = 1;
 }
 
 function clearblague() {
     Array.from(blague.querySelectorAll('article:not(.byUser)')).forEach(element => {
         element.remove();
+        blagueSetup = "";
+        blagueDelivery = "";
     });
     // console.log(blague.children);
     // if (blague.children) {

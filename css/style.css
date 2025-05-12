@@ -16,7 +16,6 @@ article {
     border-style: solid;
     box-shadow: 12px 12px 1px 1px #5a9fc650;
     width: 60%;
-
     @media (min-width: 800px) {
         width: 18%;
     }
@@ -93,6 +92,7 @@ h1 {
     padding: 0.4em;
     float: inline-start;
     font-size: larger;
+
     @media (min-width:800px) {
         float: right;
     }
