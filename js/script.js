@@ -113,15 +113,19 @@ function clearblague() {
     // }
 }
 
+// Deux fonctions qui vont modifier la 
+// taille de l'image lorsque l'on clique sur un bouton. 
+// Soit en passant à 90% pour avoir une seule photo par ligne,
+// soit en passant à 30em pour la responsivité.
 
 function onePictureByPage() {
     for (i = 0; i < elements.length; i++)
-    elements[i].style.flex = "0 0 90%";
+        elements[i].style.flex = "0 0 90%";
 }
 
 function threePictureByPage() {
     for (i = 0; i < elements.length; i++)
-    elements[i].style.flex = "0 0 30em";
+        elements[i].style.flex = "0 0 30em";
 }
 
 

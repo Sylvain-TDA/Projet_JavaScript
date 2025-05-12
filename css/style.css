@@ -89,8 +89,18 @@ h1 {
 }
 
 .btnGalerie {
-    margin: 0.8em;
-    padding: 0.8em;
+    margin: 0.4em;
+    padding: 0.4em;
+    float: inline-start;
+    font-size: larger;
+    @media (min-width:800px) {
+        float: right;
+    }
+}
+
+.btnGalerie:hover,
+.btnGalerie:focus {
+    background-color: #0876b650;
 }
 
 .center {
@@ -140,11 +150,12 @@ h1 {
 }
 
 .imageSeule {
-    margin: 2px;
+    margin: 4px;
 }
 
 .modifPosition {
     float: inline-start;
+    font-size: larger;
 
     @media (min-width:800px) {
         float: right;
@@ -154,6 +165,7 @@ h1 {
 .row {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 8em;
 }
 
 .show {
