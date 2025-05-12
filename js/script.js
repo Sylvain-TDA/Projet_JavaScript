@@ -1,5 +1,7 @@
 const blague = document.getElementById("blague");
 
+var i;
+var elements = document.getElementsByClassName("imageSeule");
 
 // fetch va chercher dans l'URL en paramètre de la fonction.
 //  Ensuite, il renvoit un résultat qu'on lit en JSON. 
@@ -16,17 +18,17 @@ function getAJoke() {
 
 // cette fonction va charger dans la page la blague récupérée avec le fetch.
 
-function addToMyPage(joke, byUser=false) {
+function addToMyPage(joke, byUser = false) {
     // on récupére l'élément avec l'ID="blague" et on créé dans newArticle une balise article
 
     const newArticle = document.createElement("article");
-    if (byUser){
+    if (byUser) {
         newArticle.setAttribute("class", "byUser");
     }
- 
+
     // On créé un nouveau contenu qui contiendra la blague
     const newContent = document.createTextNode(joke.setup + ' ' + joke.delivery);
-    
+
 
     // à la variable newArticle, on ajoute notre blague newContent
     newArticle.appendChild(newContent);
@@ -50,8 +52,8 @@ function btnReload() {
     }
 
     // enfin on ajoute les blagues déjà renseignées par l'utilisateur
-    if (blagueSetup.value && blagueDelivery){
-        addToMyPage({"setup": blagueSetup.value, "delivery": blagueDelivery.value});
+    if (blagueSetup.value && blagueDelivery) {
+        addToMyPage({ "setup": blagueSetup.value, "delivery": blagueDelivery.value });
     }
 }
 
@@ -94,13 +96,13 @@ jokeForm.addEventListener("submit", getJokeForm);
 function getJokeForm(event) {
     // pour éviter le rafraichissement de la page
     event.preventDefault();
-    addToMyPage({"setup": blagueSetup.value, "delivery": blagueDelivery.value},true);
-    submitDone=1;
+    addToMyPage({ "setup": blagueSetup.value, "delivery": blagueDelivery.value }, true);
+    submitDone = 1;
 }
 
-function clearblague () {
+function clearblague() {
     Array.from(blague.querySelectorAll('article:not(.byUser)')).forEach(element => {
-        element.remove();         
+        element.remove();
     });
     // console.log(blague.children);
     // if (blague.children) {
@@ -111,6 +113,16 @@ function clearblague () {
     // }
 }
 
+
+function onePictureByPage() {
+    for (i = 0; i < elements.length; i++)
+    elements[i].style.flex = "0 0 90%";
+}
+
+function threePictureByPage() {
+    for (i = 0; i < elements.length; i++)
+    elements[i].style.flex = "0 0 30em";
+}
 
 
 

@@ -49,8 +49,9 @@ h1 {
     margin: 2em;
     font-style: oblique;
     box-shadow: 0px 6px 1px 0px #5a9fc650;
-    @media (min-width:800px){
-    width: 25%;
+
+    @media (min-width:800px) {
+        width: 25%;
     }
 }
 
@@ -70,13 +71,8 @@ h1 {
 }
 
 #form {
-    display:flex;
+    display: flex;
     flex-direction: column;
-}
-
-#imagessize {
-    width: 90%;
-    height: 400px;
 }
 
 /* ----MODULE---- */
@@ -90,6 +86,11 @@ h1 {
     /* @media (min-width:800px) {
         float: center;
     }    */
+}
+
+.btnGalerie {
+    margin: 0.8em;
+    padding: 0.8em;
 }
 
 .center {
@@ -113,7 +114,6 @@ h1 {
     background-color: #0876b650;
 }
 
-
 .dropdownContent {
     color: black;
     display: none;
@@ -133,9 +133,14 @@ h1 {
     justify-content: end;
 }
 
-.imagessize {
-    height: 400px;
-    width: 640px
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.imageSeule {
+    margin: 2px;
 }
 
 .modifPosition {
@@ -144,6 +149,11 @@ h1 {
     @media (min-width:800px) {
         float: right;
     }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .show {
