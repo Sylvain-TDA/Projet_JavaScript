@@ -74,6 +74,11 @@ h1 {
     flex-direction: column;
 }
 
+#imagessize {
+    width: 90%;
+    height: 400px;
+}
+
 /* ----MODULE---- */
 
 /* ----STATE---- */
@@ -126,6 +131,11 @@ h1 {
 .imgFooter {
     display: flex;
     justify-content: end;
+}
+
+.imagessize {
+    height: 400px;
+    width: 640px
 }
 
 .modifPosition {
