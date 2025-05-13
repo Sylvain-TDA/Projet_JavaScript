@@ -1,7 +1,8 @@
+
 const blague = document.getElementById("blague");
 
 var i;
-var elements = document.getElementsByClassName("imageSeule");
+var imageGalerie = document.getElementsByClassName("imageSeule");
 
 // fetch va chercher dans l'URL en paramètre de la fonction.
 //  Ensuite, il renvoit un résultat qu'on lit en JSON. 
@@ -53,7 +54,7 @@ function btnReload() {
 
     // enfin on ajoute les blagues déjà renseignées par l'utilisateur
     if (blagueSetup.value && blagueDelivery.value) {
-        addToMyPage({ "setup": blagueSetup.value, "delivery": blagueDelivery.value });
+        addToMyPage({"setup": blagueSetup.value, "delivery": blagueDelivery.value});
     }
 }
 
@@ -102,8 +103,8 @@ function getJokeForm(event) {
 function clearblague() {
     Array.from(blague.querySelectorAll('article:not(.byUser)')).forEach(element => {
         element.remove();
-        blagueSetup = "";
-        blagueDelivery = "";
+        // blagueSetup = "";
+        // blagueDelivery = "";
     });
     // console.log(blague.children);
     // if (blague.children) {
@@ -120,14 +121,44 @@ function clearblague() {
 // soit en passant à 30em pour la responsivité.
 
 function onePictureByPage() {
-    for (i = 0; i < elements.length; i++)
-        elements[i].style.flex = "0 0 90%";
+    for (i = 0; i < imageGalerie.length; i++)
+        imageGalerie[i].style.flex = "0 0 90%";
 }
 
 function threePictureByPage() {
-    for (i = 0; i < elements.length; i++)
-        elements[i].style.flex = "0 0 30em";
+    for (i = 0; i < imageGalerie.length; i++)
+        imageGalerie[i].style.flex = "0 0 30em";
 }
 
+function ajoutImage() {
+     console.log("ajoutImage appelée");
+    const imagePlace = document.getElementById("images");
+    const input = document.getElementById('userImage');
+    const imageUploaded = input.files;
+   
+    if (imageUploaded.length > 0) {
+        const img = document.createElement("img");
+        img.src = URL.createObjectURL(imageUploaded[0]);
+        img.style.width = "90%";
+        imagePlace.prepend(img);
+    } else {
+        console.log("Aucun fichier sélectionné.");
+    }
+}
 
+// document.getElementById('userImage').addEventListener('change', ajoutImage);
 
+// function ajoutImage() {
+//     // event.preventDefault();
+//     const imgUtilisateur = document.getElementById("userImage");
+//     const imgUploaded = imgUtilisateur.files[0];
+    
+//     var divCreation = document.createElement("div");
+    
+//     const imgCreation = document.createElement("img");
+//     imgCreation.src = URL.createObjectURL(imgUploaded);
+
+//     // divCreation.appendChild(imgCreation);
+
+//     console.log("ajout Image utilisée")
+// }

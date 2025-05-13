@@ -21,12 +21,11 @@
         </div>
     </header>
     <h1>Galerie</h1>
-    <div>
-        <button class="btnGalerie" onclick="threePictureByPage()">Mosaïque</button>
-        <button class="btnGalerie" onclick="onePictureByPage()">Colonne</button>
-    </div>
+    <button class="btnGalerie" onclick="threePictureByPage()">Mosaïque</button>
+    <button class="btnGalerie" onclick="onePictureByPage()">Colonne</button>
+    <input type="file" name="Votre image" id="userImage" onchange="ajoutImage()">
     <div class="row">
-        <div class="images">
+        <div id="images">
             <img src="images/birds-7376432_1920.jpg" class="imageSeule" alt="oiseaux" style="width: 90%">
             <img src="images/ducks-7863701_640.jpg" class="imageSeule" alt="canard" style="width: 90%">
             <img src="images/flamingos-5859192_640.jpg" class="imageSeule" alt="flaman roses" style="width: 90%">
