@@ -3,6 +3,9 @@
 var i;
 // var imageGalerie = document.getElementsByClassName("imageSeule");
 
+let compteur = 0;
+
+
 //------------------------------------//
 //-------------GALERIE----------------//
 //------------------------------------//
@@ -30,14 +33,14 @@ function ajoutImage() {
         img.src = URL.createObjectURL(imageUploaded[0]);
         img.style.width = "90%";
         img.className = "imageSeule";
-        img.alt = "ajout utilisateur";
-        img.onclick = "deleteMyImage()";
+        img.alt = `ajout utilisateur-${compteur}`;
 
         //on ajoute l'image au début de l'élément
         imagePlace.prepend(img);
     } else {
         console.log("Aucun fichier sélectionné.");
     }
+    compteur++;
 }
 
 // Deux fonctions qui vont modifier la 
