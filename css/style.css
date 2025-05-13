@@ -16,6 +16,7 @@ article {
     border-style: solid;
     box-shadow: 12px 12px 1px 1px #5a9fc650;
     width: 60%;
+
     @media (min-width: 800px) {
         width: 18%;
     }
@@ -107,6 +108,10 @@ h1 {
     text-align: center;
 }
 
+.delete {
+    float: right;
+}
+
 .dropdown {
     float: right;
     padding: 16px 16px;
@@ -150,7 +155,9 @@ h1 {
 }
 
 .imageSeule {
-    margin: 4px;
+    margin: 6px;
+    padding: 10px;
+    flex: 0 0 auto;
 }
 
 .modifPosition {
@@ -177,5 +184,6 @@ h1 {
     margin: 0.4em;
     padding: 0.2em;
 }
+
 
 /* ----THEME---- */

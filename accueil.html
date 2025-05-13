@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="/css/style.css">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +17,7 @@
                 <a href="#">Accueil</a>
                 <a href="galerie.html">Galerie</a>
                 <a href="#">Jeux</a>
-            </div>  
+            </div>
         </div>
     </header>
     <div>
@@ -24,15 +25,16 @@
             <h1>Bienvenue sur Blagues creation</h1>
             <div>
                 <h3>Poster une blague <br></h3>
-                <input type="text" class="textarea" name="blagueSetup" id="blagueSetup" size="40" placeholder="1ere partie" required> <br>
-                <input type="text" class="textarea" name="blagueDelivery" id="blagueDelivery" size="40" placeholder="2nd partie" required> <br>
+                <input type="text" class="textarea" name="blagueSetup" id="blagueSetup" size="40"
+                    placeholder="1ere partie" required> <br>
+                <input type="text" class="textarea" name="blagueDelivery" id="blagueDelivery" size="40"
+                    placeholder="2nd partie" required> <br>
                 <button id="btnSubmit">Envoyer</button>
             </div>
         </form>
-        <div class="modifPosition">
+        <div class="modifPosition" id="bouttonSupplementaire">
             <button id="reloadBtn" onclick="btnReload()" class="btnActualiser">Actualiser</button>
         </div>
-
         <div id="blague">
         </div>
     </div>

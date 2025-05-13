@@ -21,9 +21,12 @@
         </div>
     </header>
     <h1>Galerie</h1>
-    <button class="btnGalerie" onclick="threePictureByPage()">Mosaïque</button>
-    <button class="btnGalerie" onclick="onePictureByPage()">Colonne</button>
-    <input type="file" name="Votre image" id="userImage" onchange="ajoutImage()">
+    <div>
+        <button class="btnGalerie" onclick="threePictureByPage()">Mosaïque</button>
+        <button class="btnGalerie" onclick="onePictureByPage()">Colonne</button>
+        <input type="file" name="Votre image" id="userImage" onchange="ajoutImage()">
+        <button onclick="deleteMyImage()">Supprimer l'image ajoutée</button>
+    </div>
     <div class="row">
         <div id="images">
             <img src="images/birds-7376432_1920.jpg" class="imageSeule" alt="oiseaux" style="width: 90%">
@@ -41,7 +44,7 @@
         </div>
         <p class="center">Copyright</p>
     </footer>
-    <script src="/js/script.js"></script>
+    <script src="/js/script galerie.js"></script>
 </body>
 
 </html>
