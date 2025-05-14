@@ -124,6 +124,12 @@ h1 {
     padding: 0.4em;
 }
 
+.dropDownDiffBtn {
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 0.4em;
+}
+
 .dropdownBtn:hover,
 .dropdownBtn:focus {
     background-color: #0876b650;
@@ -137,6 +143,20 @@ h1 {
 }
 
 .dropdownContent a {
+    display: block;
+    font-size: 1.2em;
+    padding: 3px;
+    text-decoration: none;
+}
+
+.dropDownDiff {
+    color: black;
+    display: none;
+    position: relative;
+    text-align: left;
+}
+
+.dropDownDiff a {
     display: block;
     font-size: 1.2em;
     padding: 3px;
@@ -158,6 +178,19 @@ h1 {
     margin: 6px;
     padding: 10px;
     flex: 0 0 auto;
+}
+
+.memory {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.memoryImg {
+    width : 40%;
+    margin: 2em;
+    visibility: hidden;
+    border : solid;
+    border-color: #717171;
 }
 
 .modifPosition {
