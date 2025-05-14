@@ -1,7 +1,32 @@
+//-----------------------------//
+//-----------DROPDOWN----------//
+//-----------------------------//
+
+// la fonction va afficher le dropdown
+
+function dropDown() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Ferme le menu dropdown quand l'utilisateur clic ailleur
+
+window.onclick = function (event) {
+    if (!event.target.matches('.dropdownBtn')) {
+        var dropdowns = document.getElementsByClassName("dropdownContent");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+
 //----var Galerie---//
 
 var i;
-// var imageGalerie = document.getElementsByClassName("imageSeule");
+let compteur = 0;
 
 //------------------------------------//
 //-------------GALERIE----------------//
@@ -30,7 +55,7 @@ function ajoutImage() {
         img.src = URL.createObjectURL(imageUploaded[0]);
         img.style.width = "90%";
         img.className = "imageSeule";
-        img.alt = "ajout utilisateur";
+        img.alt = `ajout utilisateur-${compteur}`;
         img.onclick = "deleteMyImage()";
 
         //on ajoute l'image au début de l'élément
@@ -48,24 +73,53 @@ function ajoutImage() {
 function onePictureByPage() {
     var imageGalerieOne = document.getElementsByClassName("imageSeule");
     for (i = 0; i < imageGalerieOne.length; i++)
-    if (imageGalerieOne[i]) {
-        imageGalerieOne[i].style.flex = "0 0 90%";
-        imageGalerieOne[i].style.width = "90%";
-    }
+        if (imageGalerieOne[i]) {
+            imageGalerieOne[i].style.flex = "0 0 90%";
+            imageGalerieOne[i].style.width = "90%";
+        }
 }
 
 function threePictureByPage() {
     var imageGalerieThree = document.getElementsByClassName("imageSeule");
     for (i = 0; i < imageGalerieThree.length; i++)
-    if (imageGalerieThree[i]) {
-        imageGalerieThree[i].style.flex = "0 0 30em";
-        imageGalerieThree[i].style.width = "30em";
-    }
+        if (imageGalerieThree[i]) {
+            imageGalerieThree[i].style.flex = "0 0 30em";
+            imageGalerieThree[i].style.width = "30em";
+        }
 }
 
 // Supprimer l'image ajouter par l'utilisateur
 
-function deleteMyImage (){
-    const imgToDelete = document.querySelector('img[alt="ajout utilisateur"]')
+function deleteMyImage() {
+    const imgToDelete = document.querySelector(`img[alt="ajout utilisateur-${compteur}"]`);
     imgToDelete.remove();
 }
+
+//-------CAROUSSEL-----------//
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+
+function currentSlide(n) {
+  setTimeout(showSlides(n), 2500);
+}
+
+function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    setTimeout(showSlides, 2500); // Change image every 2 seconds
+} 
+
